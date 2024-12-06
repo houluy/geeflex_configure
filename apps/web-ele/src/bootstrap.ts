@@ -7,7 +7,7 @@ import '@vben/styles';
 import '@vben/styles/ele';
 
 import { useTitle } from '@vueuse/core';
-import { ElLoading } from 'element-plus';
+import ElementPlus, { ElLoading } from 'element-plus';
 
 import { $t, setupI18n } from '#/locales';
 
@@ -34,6 +34,7 @@ async function bootstrap(namespace: string) {
 
   // 配置路由及路由守卫
   app.use(router);
+  app.use(ElementPlus);
 
   // 动态更新标题
   watchEffect(() => {

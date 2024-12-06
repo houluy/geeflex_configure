@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "age": {
+      "type": "number",
+      "title": "Age"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email"
+    }
+  }
+}

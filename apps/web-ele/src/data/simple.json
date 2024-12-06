@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "title": "测试",
+  "properties": {
+    "name": {
+      "title": "姓名",
+      "type": "string"
+    },
+    "age": {
+      "title": "年龄",
+      "type": "number"
+    },
+    "gender": {
+      "title": "性别",
+      "type": "string",
+      "enum": ["男", "女"]
+    },
+    "address": {
+      "title": "地址",
+      "type": "string"
+    },
+    "email": {
+      "title": "邮箱",
+      "type": "string",
+      "format": "email"
+    }
+  }
+}
