@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useVbenForm } from '#/adapter/form';
+import { $t } from '#/locales';
 
 const [BaseForm] = useVbenForm({
   // 所有表单项共用，可单独在表单内覆盖
@@ -9,6 +10,8 @@ const [BaseForm] = useVbenForm({
       class: 'w-full',
     },
   },
+  showCollapseButton: true,
+  collapsed: true,
   // 使用 tailwindcss grid布局
   // 提交函数
   // handleSubmit: onSubmit,
@@ -20,13 +23,13 @@ const [BaseForm] = useVbenForm({
       // 组件需要在 #/adapter.ts内注册，并加上类型
       component: 'Input',
       // 对应组件的参数
-      componentProps: {
-        placeholder: '请输入用户名',
-      },
+      // componentProps: {
+      //  placeholder: '请输入用户名',
+      // },
       // 字段名
-      fieldName: 'field1',
+      fieldName: 'cell_default',
       // 界面显示的label
-      label: 'field1',
+      label: $t('configuration.test.cell_default'),
     },
     {
       component: 'Select',
@@ -48,6 +51,11 @@ const [BaseForm] = useVbenForm({
       },
       fieldName: 'fieldOptions',
       label: '下拉选',
+    },
+    {
+      component: 'Input',
+      fieldName: 'com_addr',
+      label: '通信地址',
     },
   ],
   wrapperClass: 'grid-cols-1 md:grid-cols-2',

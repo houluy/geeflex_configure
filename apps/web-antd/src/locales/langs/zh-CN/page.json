@@ -12,6 +12,7 @@
     "workspace": "工作台"
   },
   "configuration": {
-    "title": "配置页"
+    "title": "参数配置页",
+    "test": "测试用例"
   }
 }

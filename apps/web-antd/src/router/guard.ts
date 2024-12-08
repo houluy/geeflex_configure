@@ -69,6 +69,7 @@ function setupAccessGuard(router: Router) {
 
       // 没有访问权限，跳转登录页面
       if (to.fullPath !== LOGIN_PATH) {
+        // return true
         return {
           path: LOGIN_PATH,
           // 如不需要，直接删除 query

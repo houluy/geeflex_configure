@@ -12,6 +12,7 @@
     "workspace": "Workspace"
   },
   "configuration": {
-    "title": "Configuration"
+    "title": "Parameter Configuration",
+    "test": "Test case"
   }
 }

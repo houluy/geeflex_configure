@@ -1,0 +1,8 @@
+{  
+  "test": {
+    "cell_default": "Cell default configuration",
+    "cell_barred": "Cell barred",
+    "cell_list": "Cell list",
+    "com_addr": "Communication address"
+  }
+}

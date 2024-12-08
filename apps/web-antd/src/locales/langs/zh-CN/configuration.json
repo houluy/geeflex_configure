@@ -1,0 +1,8 @@
+{  
+  "test": {
+    "cell_default": "小区默认配置",
+    "cell_barred": "允许接入",
+    "cell_list": "小区列表",
+    "com_addr": "通信地址"
+  }
+}
