@@ -41,13 +41,13 @@ const expandIcon = (propsval) => {
     <template #bodyCell="{ column, record }">
       <template v-if="record[column.dataIndex[0]].type === 'string'">
         <CustomInput
-          v-model:value="record[column.dataIndex[0]].value"
+          v-model:input="record[column.dataIndex[0]].value"
           :tooltip-title="record[column.dataIndex[0]].tooltipTitle"
         />
       </template>
       <template v-else-if="record[column.dataIndex[0]].type === 'number'">
         <CustomInputNumber
-          v-model:value="record[column.dataIndex[0]].value"
+          v-model:input="record[column.dataIndex[0]].value"
           :tooltip-title="record[column.dataIndex[0]].tooltipTitle"
         />
       </template>

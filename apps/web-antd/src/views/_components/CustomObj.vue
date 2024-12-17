@@ -32,7 +32,7 @@ const expandIcon = (propsval) => {
 
 <template>
   <a-table
-    :columns="columns"
+    :columns="props.columns"
     :data-source="props.table"
     :expand-icon="expandIcon"
     :pagination="false"
@@ -51,7 +51,7 @@ const expandIcon = (propsval) => {
       </template>
       <template v-else-if="record.type === 'number'">
         <CustomInputNumber
-          v-model:value="record.value"
+          v-model:input="record.value"
           :tooltip-title="record.tooltipTitle"
         />
       </template>

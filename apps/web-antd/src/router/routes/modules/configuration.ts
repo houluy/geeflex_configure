@@ -50,6 +50,7 @@ const routes: RouteRecordRaw[] = [
         path: 'test',
         component: () => import('#/views/configuration/testTable.vue'),
         meta: {
+          keepalive: true,
           title: '测试AntdTable',
           ignoreAccess: true,
         },

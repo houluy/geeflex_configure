@@ -1,4 +1,4 @@
-import { defineConfig } from '@vben/vite-config';
+import { defineConfig } from '@vben/vite-config'
 
 export default defineConfig(async () => {
   return {
@@ -9,12 +9,11 @@ export default defineConfig(async () => {
           '/api': {
             changeOrigin: true,
             rewrite: (path) => path.replace(/^\/api/, ''),
-            // mock代理目标地址
-            target: 'http://localhost:5320/api',
-            ws: true,
+            target: 'http://62.234.192.247:10009/api',
+            ws: false,
           },
         },
       },
     },
-  };
-});
+  }
+})

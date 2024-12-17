@@ -139,27 +139,5 @@ const data = reactive<RowData[]>([
 ])
 </script>
 <template>
-  <!--<a-table :columns="columns" :data-source="data" :expand-icon="expandIcon">
-    <template #expandedRowRender="{ record }">
-      <span>{{ record.value }}</span>
-    </template>
-    <template #bodyCell="{ column, record, index }">
-      <template v-if="record.type === 'string'">
-        <CustomInput
-          v-model:input="inputvalue"
-          tooltip-title="This is tooltip title"
-        />
-      </template>
-      <template v-else-if="record.type === 'number'">
-        <CustomInputNumber
-          v-model:input="inputvalue"
-          tooltip-title="This is input number tooltip"
-        />
-      </template>
-      <template v-else-if="record.hasChildren">
-        <CustomObj :table="record.childrenTable" />
-      </template>
-    </template>
-  </a-table>-->
   <CustomObj :columns="columns" :table="data" />
 </template>

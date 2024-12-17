@@ -5,7 +5,11 @@ interface InputNumberProps {
   min?: number
 }
 
-const props = defineProps<InputNumberProps>()
+const props = withDefaults(defineProps<InputNumberProps>(), {
+  tooltipTitle: 'Unknown',
+  max: 10,
+  min: 0,
+})
 const iptVal = defineModel('input')
 </script>
 
