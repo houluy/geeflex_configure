@@ -1,9 +1,9 @@
-import type { Linter } from 'eslint';
+import type { Linter } from 'eslint'
 
 // @ts-expect-error - no types
-import js from '@eslint/js';
-import pluginUnusedImports from 'eslint-plugin-unused-imports';
-import globals from 'globals';
+import js from '@eslint/js'
+import pluginUnusedImports from 'eslint-plugin-unused-imports'
+import globals from 'globals'
 
 export async function javascript(): Promise<Linter.Config[]> {
   return [
@@ -207,8 +207,8 @@ export async function javascript(): Promise<Linter.Config[]> {
           },
         ],
         'prefer-exponentiation-operator': 'error',
-
         'prefer-promise-reject-errors': 'error',
+
         'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
@@ -238,5 +238,5 @@ export async function javascript(): Promise<Linter.Config[]> {
         yoda: ['error', 'never'],
       },
     },
-  ];
+  ]
 }

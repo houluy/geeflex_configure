@@ -1,8 +1,14 @@
-{  
+{
   "test": {
     "cell_default": "Cell default configuration",
     "cell_barred": "Cell barred",
     "cell_list": "Cell list",
-    "com_addr": "Communication address"
+    "com_addr": "Communication address",
+    "cqi_period": "CQI Period",
+    "enb_id": "eNodeB ID"
+  },
+  "meta": {
+    "field": "Field",
+    "value": "Value"
   }
 }

@@ -1,7 +1,7 @@
-import type { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw } from 'vue-router'
 
-import { BasicLayout } from '#/layouts';
-import { $t } from '#/locales';
+import { BasicLayout } from '#/layouts'
+import { $t } from '#/locales'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -35,8 +35,27 @@ const routes: RouteRecordRaw[] = [
           ignoreAccess: true,
         },
       },
+      {
+        name: 'ConfigurationAntdTable',
+        path: 'antd_table',
+        component: () => import('#/views/configuration/antdTable.vue'),
+        meta: {
+          icon: 'svg-spinners:blocks-shuffle-3',
+          title: $t('page.configuration.test'),
+          ignoreAccess: true,
+        },
+      },
+      {
+        name: 'TestAntdTable',
+        path: 'test',
+        component: () => import('#/views/configuration/testTable.vue'),
+        meta: {
+          title: '测试AntdTable',
+          ignoreAccess: true,
+        },
+      },
     ],
   },
-];
+]
 
-export default routes;
+export default routes
