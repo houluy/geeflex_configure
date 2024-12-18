@@ -6,6 +6,14 @@ import { reactive } from 'vue'
 import { $t } from '#/locales'
 import CustomObj from '#/views/_components/CustomObj.vue'
 
+// interface _BasicRowData {
+//  key: string
+//  field: string
+//  value: number | string
+//  type: string
+//  hasChildren: boolean
+// }
+
 interface RowData {
   key: string
   field: string
