@@ -1,0 +1,698 @@
+{
+    "type": "object",
+    "properties": {
+      "cell_default": {
+        "type": "object",
+        "properties": {
+          "cell_barred": {
+            "type": "boolean"
+          },
+          "cipher_algo_pref": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "cqi_period": {
+            "type": "number"
+          },
+          "cyclic_prefix": {
+            "type": "string"
+          },
+          "dl_256qam": {
+            "type": "boolean"
+          },
+          "dpc": {
+            "type": "boolean"
+          },
+          "dpc_pucch_snr_target": {
+            "type": "number"
+          },
+          "dpc_pusch_snr_target": {
+            "type": "number"
+          },
+          "drb_config": {
+            "type": "string"
+          },
+          "edrx": {
+            "type": "boolean"
+          },
+          "inactivity_timer": {
+            "type": "number"
+          },
+          "initial_cqi": {
+            "type": "number"
+          },
+          "integ_algo_pref": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "intra_freq_reselection": {
+            "type": "boolean"
+          },
+          "mac_config": {
+            "type": "object",
+            "properties": {
+              "dl_max_harq_tx": {
+                "type": "number"
+              },
+              "ul_max_harq_tx": {
+                "type": "number"
+              }
+            }
+          },
+          "n_symb_cch": {
+            "type": "number"
+          },
+          "p_max": {
+            "type": "number"
+          },
+          "pdcch_format": {
+            "type": "number"
+          },
+          "pdsch_dedicated": {
+            "type": "object",
+            "properties": {
+              "p_a": {
+                "type": "number"
+              },
+              "p_b": {
+                "type": "number"
+              }
+            }
+          },
+          "phich_duration": {
+            "type": "string"
+          },
+          "phich_resource": {
+            "type": "string"
+          },
+          "plmn_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "attach_without_pdn": {
+                  "type": "boolean"
+                },
+                "cp_ciot_opt": {
+                  "type": "boolean"
+                },
+                "plmn": {
+                  "type": "string"
+                },
+                "reserved": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "prach_config_index": {
+            "type": "number"
+          },
+          "prach_freq_offset": {
+            "type": "number"
+          },
+          "pucch_dedicated": {
+            "type": "object",
+            "properties": {
+              "cqi_pucch_n_rb": {
+                "type": "number"
+              },
+              "n1_pucch_sr_count": {
+                "type": "number"
+              }
+            }
+          },
+          "pusch_dedicated": {
+            "type": "object",
+            "properties": {
+              "beta_offset_ack_index": {
+                "type": "number"
+              },
+              "beta_offset_cqi_index": {
+                "type": "number"
+              },
+              "beta_offset_ri_index": {
+                "type": "number"
+              }
+            }
+          },
+          "pusch_hopping_offset": {
+            "type": "number"
+          },
+          "pusch_max_its": {
+            "type": "number"
+          },
+          "pusch_msg3_mcs": {
+            "type": "number"
+          },
+          "q_rx_lev_min": {
+            "type": "number"
+          },
+          "si_coderate": {
+            "type": "number"
+          },
+          "si_pdcch_format": {
+            "type": "number"
+          },
+          "si_value_tag": {
+            "type": "number"
+          },
+          "si_window_length": {
+            "type": "number"
+          },
+          "sib_sched_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "filename": {
+                  "type": "string"
+                },
+                "si_periodicity": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "sr_period": {
+            "type": "number"
+          },
+          "srb_config": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "maxRetxThreshold": {
+                  "type": "number"
+                },
+                "t_PollRetransmit": {
+                  "type": "number"
+                },
+                "t_Reordering": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "id",
+                "maxRetxThreshold",
+                "t_PollRetransmit",
+                "t_Reordering"
+              ]
+            }
+          },
+          "srs_dedicated": {
+            "type": "object",
+            "properties": {
+              "srs_bandwidth": {
+                "type": "number"
+              },
+              "srs_bandwidth_config": {
+                "type": "number"
+              },
+              "srs_hopping_bandwidth": {
+                "type": "number"
+              },
+              "srs_period": {
+                "type": "number"
+              },
+              "srs_subframe_config": {
+                "type": "number"
+              }
+            }
+          },
+          "ul_64qam": {
+            "type": "boolean"
+          }
+        }
+      },
+      "cell_list": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "br_ue": {
+              "type": "object",
+              "properties": {
+                "br_coverage_levels": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "br_initial_cqi": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_al": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_css_n_rep": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_css_ra_al": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_n_rb": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_n_rep": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_n_rep_max": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_start_sf": {
+                        "type": "number"
+                      },
+                      "br_mpdcch_tm_type": {
+                        "type": "string"
+                      },
+                      "br_msg3_pusch_n_rep": {
+                        "type": "number"
+                      },
+                      "br_pdsch_n_rep": {
+                        "type": "number"
+                      },
+                      "br_pusch_msg3_mcs": {
+                        "type": "number"
+                      },
+                      "br_pusch_n_rep": {
+                        "type": "number"
+                      },
+                      "br_rar_coderate": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "br_cqi_pucch_n_rb": {
+                  "type": "number"
+                },
+                "br_mpdcch_paging_n_rep": {
+                  "type": "number"
+                },
+                "br_mpdcch_ue_count": {
+                  "type": "number"
+                },
+                "br_n1_pucch_sr_count": {
+                  "type": "number"
+                },
+                "br_paging_mcs": {
+                  "type": "number"
+                },
+                "br_paging_n_rep": {
+                  "type": "number"
+                },
+                "br_prach_freq_offset": {
+                  "type": "number"
+                },
+                "br_r_sib1": {
+                  "type": "number"
+                },
+                "br_root_sequence_index": {
+                  "type": "number"
+                },
+                "br_si_repetition_pattern": {
+                  "type": "number"
+                },
+                "br_si_window_length": {
+                  "type": "number"
+                },
+                "br_sib_sched_list": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "filename": {
+                        "type": "string"
+                      },
+                      "si_periodicity": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "br_srs_enabled": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "cell_id": {
+              "type": "number"
+            },
+            "cqi_period": {
+              "type": "number"
+            },
+            "dl_earfcn": {
+              "type": "number"
+            },
+            "n_antenna_dl": {
+              "type": "number"
+            },
+            "n_antenna_ul": {
+              "type": "number"
+            },
+            "n_id_cell": {
+              "type": "number"
+            },
+            "n_rb_dl": {
+              "type": "number"
+            },
+            "pucch_dedicated": {
+              "type": "object",
+              "properties": {
+                "cqi_pucch_n_rb": {
+                  "type": "number"
+                }
+              }
+            },
+            "pusch_msg3_mcs": {
+              "type": "number"
+            },
+            "rf_port": {
+              "type": "number"
+            },
+            "root_sequence_index": {
+              "type": "number"
+            },
+            "sr_period": {
+              "type": "number"
+            },
+            "srs_dedicated": {
+              "type": "object",
+              "properties": {
+                "srs_period": {
+                  "type": "number"
+                }
+              }
+            },
+            "tac": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "com_addr": {
+        "type": "string"
+      },
+      "enb_id": {
+        "type": "number"
+      },
+      "gtp_addr": {
+        "type": "string"
+      },
+      "log_filename": {
+        "type": "string"
+      },
+      "log_options": {
+        "type": "string"
+      },
+      "mme_list": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "mme_addr": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "nb_cell_default": {
+        "type": "object",
+        "properties": {
+          "cell_barred": {
+            "type": "boolean"
+          },
+          "cipher_algo_pref": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "coverage_levels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "msg3_n_rep": {
+                  "type": "number"
+                },
+                "msg3_n_sc": {
+                  "type": "number"
+                },
+                "msg3_single_tone_mcs": {
+                  "type": "number"
+                },
+                "npdcch_paging_n_rep": {
+                  "type": "number"
+                },
+                "npdcch_ra_n_rep": {
+                  "type": "number"
+                },
+                "npdcch_uss_n_rep": {
+                  "type": "number"
+                },
+                "npdcch_uss_n_rep_max": {
+                  "type": "number"
+                },
+                "npdcch_uss_offset": {
+                  "type": "number"
+                },
+                "npdcch_uss_start_sf": {
+                  "type": "number"
+                },
+                "npdsch_i_tbs": {
+                  "type": "number"
+                },
+                "npdsch_n_rep": {
+                  "type": "number"
+                },
+                "npdsch_paging_i_tbs": {
+                  "type": "number"
+                },
+                "npdsch_paging_n_rep": {
+                  "type": "number"
+                },
+                "npdsch_ra_i_tbs": {
+                  "type": "number"
+                },
+                "npdsch_ra_n_rep": {
+                  "type": "number"
+                },
+                "nprach_detect_threshold": {
+                  "type": "number"
+                },
+                "npusch_multi_tone_i_tbs": {
+                  "type": "number"
+                },
+                "npusch_n_rep": {
+                  "type": "number"
+                },
+                "npusch_n_sc": {
+                  "type": "number"
+                },
+                "npusch_single_tone_i_tbs": {
+                  "type": "number"
+                },
+                "ul_sc_spacing": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "drb_config": {
+            "type": "string"
+          },
+          "inactivity_timer": {
+            "type": "number"
+          },
+          "integ_algo_pref": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "intra_freq_reselection": {
+            "type": "boolean"
+          },
+          "mac_config": {
+            "type": "object",
+            "properties": {
+              "dl_max_consecutive_retx": {
+                "type": "number"
+              },
+              "dl_max_harq_tx": {
+                "type": "number"
+              },
+              "logical_channel_sr_prohibit_timer": {
+                "type": "number"
+              },
+              "msg3_max_harq_tx": {
+                "type": "number"
+              },
+              "periodic_bsr_timer": {
+                "type": "number"
+              },
+              "retx_bsr_timer": {
+                "type": "number"
+              },
+              "time_alignment_timer_dedicated": {
+                "type": "number"
+              },
+              "ul_max_consecutive_retx": {
+                "type": "number"
+              },
+              "ul_max_harq_tx": {
+                "type": "number"
+              }
+            }
+          },
+          "npusch_max_its": {
+            "type": "number"
+          },
+          "p_max": {
+            "type": "number"
+          },
+          "plmn_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "attach_without_pdn": {
+                  "type": "boolean"
+                },
+                "plmn": {
+                  "type": "string"
+                },
+                "reserved": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "q_qual_min": {
+            "type": "number"
+          },
+          "q_rx_lev_min": {
+            "type": "number"
+          },
+          "r_sib1": {
+            "type": "number"
+          },
+          "si_radio_frame_offset": {
+            "type": "number"
+          },
+          "si_value_tag": {
+            "type": "number"
+          },
+          "si_value_tag_list_enable": {
+            "type": "boolean"
+          },
+          "si_window_length": {
+            "type": "number"
+          },
+          "sib_sched_list": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "filename": {
+                  "type": "string"
+                },
+                "si_periodicity": {
+                  "type": "number"
+                },
+                "si_repetition_pattern": {
+                  "type": "number"
+                },
+                "si_value_tag": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "srb_config": {
+            "type": "object",
+            "properties": {
+              "enb_maxRetxThreshold": {
+                "type": "number"
+              },
+              "enb_t_PollRetransmit": {
+                "type": "number"
+              },
+              "maxRetxThreshold": {
+                "type": "number"
+              },
+              "t_PollRetransmit": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "nb_cell_list": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "cell_id": {
+              "type": "number"
+            },
+            "dl_earfcn": {
+              "type": "number"
+            },
+            "n_antenna_dl": {
+              "type": "number"
+            },
+            "n_antenna_ul": {
+              "type": "number"
+            },
+            "n_id_ncell": {
+              "type": "number"
+            },
+            "operation_mode": {
+              "type": "string"
+            },
+            "rel13_5": {
+              "type": "boolean"
+            },
+            "rf_port": {
+              "type": "number"
+            },
+            "tac": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "rf_driver": {
+        "type": "object",
+        "properties": {
+          "args": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "rx_antenna": {
+            "type": "string"
+          },
+          "sync": {
+            "type": "string"
+          }
+        }
+      },
+      "rx_gain": {
+        "type": "number"
+      },
+      "tx_gain": {
+        "type": "number"
+      }
+    }
+  }

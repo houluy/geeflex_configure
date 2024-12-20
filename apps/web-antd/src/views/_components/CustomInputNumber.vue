@@ -10,6 +10,7 @@ const props = withDefaults(defineProps<InputNumberProps>(), {
   max: 10,
   min: 0,
 })
+
 const iptVal = defineModel('input')
 </script>
 

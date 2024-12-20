@@ -1,32 +1,48 @@
 <script lang="ts" setup>
 import { h } from 'vue'
 
-import CustomArray from '../_components/CustomArray.vue'
+import { CaretDownOutlined, CaretRightOutlined } from '@ant-design/icons-vue'
+
+import CustomArray from './CustomArray.vue'
+import CustomBoolean from './CustomBoolean.vue'
 import CustomField from './CustomField.vue'
 import CustomInput from './CustomInput.vue'
 import CustomInputNumber from './CustomInputNumber.vue'
+import CustomSimpleArray from './CustomSimpleArray.vue'
 
 interface TableProps {
-  table: object
-  columns: object
+  table: any[]
+  columns: any[]
 }
 
 const props = defineProps<TableProps>()
-const expandIcon = (propsval) => {
+const emit = defineEmits(['update:table'])
+
+const handleValueChange = (record: any, value: any) => {
+  const updatedTable = props.table.map((item) =>
+    item.key === record.key ? { ...item, value } : item,
+  )
+  emit('update:table', [...updatedTable])
+}
+
+const expandIcon = (propsval: any) => {
   if (propsval.record.hasChildren) {
-    const mark = propsval.expanded ? '-' : '+'
     return h(
-      'a',
+      'span',
       {
+        class: 'expand-icon-wrapper',
         onClick: (e) => {
           propsval.onExpand(propsval.record, e)
         },
       },
-      mark,
+      [
+        h(propsval.expanded ? CaretDownOutlined : CaretRightOutlined, {
+          class: 'expand-icon',
+        }),
+      ],
     )
-  } else {
-    return null
   }
+  return null
 }
 </script>
 
@@ -40,20 +56,34 @@ const expandIcon = (propsval) => {
     size="small"
   >
     <template #bodyCell="{ column, record }">
-      <template v-if="column.dataIndex === 'field'">
-        <CustomField :title="record.field" />
+      <template v-if="column.dataIndex === 'key'">
+        <CustomField :title="record.key" />
       </template>
-      <template v-else-if="record.type === 'string'">
-        <CustomInput
-          v-model:input="record.value"
-          :tooltip-title="record.tooltipTitle"
-        />
-      </template>
-      <template v-else-if="record.type === 'number'">
-        <CustomInputNumber
-          v-model:input="record.value"
-          :tooltip-title="record.tooltipTitle"
-        />
+      <template v-else>
+        <template v-if="record.type === 'string'">
+          <CustomInput
+            v-model:input="record.value"
+            :tooltip-title="record.tooltipTitle"
+          />
+        </template>
+        <template v-else-if="record.type === 'number'">
+          <CustomInputNumber
+            v-model:input="record.value"
+            :tooltip-title="record.tooltipTitle"
+          />
+        </template>
+        <template v-else-if="record.type === 'boolean'">
+          <CustomBoolean
+            v-model:input="record.value"
+            :tooltip-title="record.tooltipTitle"
+          />
+        </template>
+        <template v-else-if="record.type === 'simple_array'">
+          <CustomSimpleArray
+            v-model:value="record.value"
+            :tooltip-title="record.tooltipTitle"
+          />
+        </template>
       </template>
     </template>
     <template #expandedRowRender="{ record }">
@@ -61,12 +91,20 @@ const expandIcon = (propsval) => {
         <CustomObj
           :columns="record.childrenColumn"
           :table="record.childrenTable"
+          @update:table="
+            (val) =>
+              handleValueChange(record, { ...record, childrenTable: val })
+          "
         />
       </template>
       <template v-else-if="record.type === 'array'">
         <CustomArray
           :columns="record.childrenColumn"
           :table="record.childrenTable"
+          @update:table="
+            (val) =>
+              handleValueChange(record, { ...record, childrenTable: val })
+          "
         />
       </template>
     </template>
